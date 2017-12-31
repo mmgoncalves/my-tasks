@@ -13,7 +13,10 @@ class TasksView: UIView {
     
     var backButton: UIButton = {
        let button = UIButton()
-        button.titleLabel?.textColor = UIColor.red
+//        button.backgroundColor = UIColor.darkGray
+        let image = UIImage(named: "back")
+//        button.imageView?.image = UIImage(named: "back")
+        button.setBackgroundImage(image, for: UIControlState.normal)
         return button
     }()
     var tableView: UITableView = {
@@ -32,8 +35,6 @@ class TasksView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backButton.titleLabel?.text = "Fechar"
-        
         self.addSubview(backButton)
         self.addSubview(tableView)
         
@@ -48,8 +49,10 @@ class TasksView: UIView {
         
         if didUpdateConstraints {
             
-            backButton.autoPinEdge(toSuperviewEdge: .top, withInset: 10.0)
+            backButton.autoPinEdge(toSuperviewEdge: .top, withInset: 16.0)
             backButton.autoPinEdge(toSuperviewEdge: .left, withInset: 10.0)
+            backButton.autoSetDimension(.width, toSize: 32.0)
+            backButton.autoSetDimension(.height, toSize: 32.0)
             
             tableView.autoPinEdge(.top, to: .bottom, of: backButton, withOffset: 10.0)
             tableView.autoPinEdge(toSuperviewEdge: .left, withInset: 0.0)

@@ -28,6 +28,12 @@ class TasksViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         taskView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
+       
+        taskView.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc func backButtonPressed() {
+        dismiss(animated: true, completion: nil)
     }
 
 }
