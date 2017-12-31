@@ -10,7 +10,7 @@ import Foundation
 
 struct JSONTask: Codable {
     var id: Int
-    var project_it: Int
+    var project_id: Int
     var content: String
     var priority: Int
     var url: String

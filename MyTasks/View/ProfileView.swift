@@ -68,6 +68,7 @@ class ProfileView: UIView {
             
             shouldSetUpConstraints = false
         }
+        
         super.updateConstraints()
     }
 

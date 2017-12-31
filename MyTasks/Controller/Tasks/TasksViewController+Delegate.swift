@@ -8,6 +8,9 @@
 
 import UIKit
 
-extension TasksViewController: UITableViewDelegate {
+extension TasksViewController: UITableViewDelegate, ServiceDelegate {
     
+    func didFinish(error: Error?) {
+        self.taskView.tableView.reloadData()
+    }
 }

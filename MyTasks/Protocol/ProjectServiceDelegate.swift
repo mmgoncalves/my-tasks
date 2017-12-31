@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ProjectServiceDelegate {
+protocol ServiceDelegate {
     func didFinish(error: Error?) -> Void
 }

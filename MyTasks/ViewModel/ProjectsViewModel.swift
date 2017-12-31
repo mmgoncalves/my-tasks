@@ -11,16 +11,12 @@ import Foundation
 class ProjectsViewModel {
     
     var projects = [JSONProject]()
-    var delegate: ProjectServiceDelegate!
-    
-    required init() {
-        
-    }
+    var delegate: ServiceDelegate!
     
     func getProjects() {
         let endPoint = Endpoint.allProjects
         
-        Services.makeRequest(endPoint: endPoint) { (jsonProjects) in
+        Services.makeProjectRequest(endPoint: endPoint) { (jsonProjects) in
             
             if let jsonProjects = jsonProjects {
                 self.projects = jsonProjects

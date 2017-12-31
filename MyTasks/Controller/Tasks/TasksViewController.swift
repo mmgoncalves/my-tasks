@@ -11,11 +11,19 @@ import UIKit
 class TasksViewController: UIViewController {
 
     var taskView: TasksView!
+    var viewModel: TaskViewModel!
+    var project: JSONProject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = TaskViewModel()
+        viewModel.delegate = self
+        viewModel.getTasks(project: self.project)
+        
         taskView = TasksView(frame: CGRect.zero)
+        taskView.tableView.delegate = self
+        taskView.tableView.dataSource = self
         self.view.addSubview(taskView)
         self.view.backgroundColor = UIColor.white
         

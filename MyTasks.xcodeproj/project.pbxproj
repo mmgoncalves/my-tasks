@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2412452F008880A45C05C43D /* Pods_MyTasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EC8B13CFF2628BA2E3310A /* Pods_MyTasks.framework */; };
+		C3173AB01FF6813C00D9F0E2 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3173AAF1FF6813C00D9F0E2 /* TasksTableViewCell.swift */; };
+		C3173AB21FF6831B00D9F0E2 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3173AB11FF6831B00D9F0E2 /* TaskViewModel.swift */; };
 		C358801A1FF1E83A008D09B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35880191FF1E83A008D09B8 /* Constants.swift */; };
 		C38AEDE61FEE80620063B651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38AEDE51FEE80620063B651 /* AppDelegate.swift */; };
 		C38AEDED1FEE80620063B651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38AEDEC1FEE80620063B651 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2DDD55BFD81D30710648DB22 /* Pods-MyTasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTasks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTasks/Pods-MyTasks.debug.xcconfig"; sourceTree = "<group>"; };
 		64D6FB85F07D46697AC37559 /* Pods-MyTasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTasks.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTasks/Pods-MyTasks.release.xcconfig"; sourceTree = "<group>"; };
+		C3173AAF1FF6813C00D9F0E2 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		C3173AB11FF6831B00D9F0E2 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		C35880191FF1E83A008D09B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C38AEDE21FEE80620063B651 /* MyTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38AEDE51FEE80620063B651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				C38AEE0C1FEE92620063B651 /* TasksView.swift */,
 				C38AEE141FEEC7400063B651 /* ProjectTableViewCell.swift */,
 				C38AEE201FEFDFD70063B651 /* CubeView.swift */,
+				C3173AAF1FF6813C00D9F0E2 /* TasksTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C38AEE161FEF2DDE0063B651 /* ProjectsViewModel.swift */,
+				C3173AB11FF6831B00D9F0E2 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -374,7 +380,9 @@
 				C38AEE281FEFE1300063B651 /* TasksViewController+DataSource.swift in Sources */,
 				C38AEE1F1FEF30250063B651 /* ProjectServiceDelegate.swift in Sources */,
 				C38AEDFC1FEE83060063B651 /* ProfileView.swift in Sources */,
+				C3173AB01FF6813C00D9F0E2 /* TasksTableViewCell.swift in Sources */,
 				C38AEE0F1FEE93B80063B651 /* Services.swift in Sources */,
+				C3173AB21FF6831B00D9F0E2 /* TaskViewModel.swift in Sources */,
 				C38AEE231FEFDFE70063B651 /* CubeViewController.swift in Sources */,
 				C38AEE1B1FEF2F200063B651 /* ProjectsViewController+Delegate.swift in Sources */,
 				C38AEE131FEEAB9F0063B651 /* JSONTask.swift in Sources */,

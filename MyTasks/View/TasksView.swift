@@ -18,7 +18,7 @@ class TasksView: UIView {
     }()
     var tableView: UITableView = {
        let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TaskCell")
+        tableView.register(TasksTableViewCell.self, forCellReuseIdentifier: "TaskCell")
         return tableView
     }()
     var navController: UINavigationController = {
@@ -33,7 +33,6 @@ class TasksView: UIView {
         super.init(frame: frame)
         
         backButton.titleLabel?.text = "Fechar"
-        
         
         self.addSubview(backButton)
         self.addSubview(tableView)

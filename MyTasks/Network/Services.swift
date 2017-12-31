@@ -11,6 +11,7 @@ import Alamofire
 
 typealias RequestCompleted = (_ error: Error?) -> ()
 typealias RequestProjectFinished = (_ jsonProjectw: [JSONProject]?) -> ()
+typealias RequestTaskFinished = (_ jsonProjectw: [JSONTask]?) -> ()
 
 enum Endpoint {
     case allProjects
@@ -31,7 +32,7 @@ enum Endpoint {
 
 struct Services {
     
-    static func makeRequest(endPoint: Endpoint, completion: @escaping RequestProjectFinished) {
+    static func makeProjectRequest(endPoint: Endpoint, completion: @escaping RequestProjectFinished) {
         Alamofire.request(endPoint.url, method: .get)
             .validate()
             .responseJSON { (response) in
@@ -44,6 +45,25 @@ struct Services {
                 do {
                     let jsonProject = try JSONDecoder().decode([JSONProject].self, from: data)
                     completion(jsonProject)
+                } catch {
+                    completion(nil)
+                }
+        }
+    }
+    
+    static func makeTaskRequest(endPoint: Endpoint, completion: @escaping RequestTaskFinished) {
+        Alamofire.request(endPoint.url, method: .get)
+            .validate()
+            .responseJSON { (response) in
+                
+                guard let data = response.data else {
+                    completion(nil)
+                    return
+                }
+                
+                do {
+                    let jsonTask = try JSONDecoder().decode([JSONTask].self, from: data)
+                    completion(jsonTask)
                 } catch {
                     completion(nil)
                 }

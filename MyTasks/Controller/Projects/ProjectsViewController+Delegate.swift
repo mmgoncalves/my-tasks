@@ -8,14 +8,18 @@
 
 import UIKit
 
-extension ProjectsViewController: UITableViewDelegate, ProjectServiceDelegate {
+extension ProjectsViewController: UITableViewDelegate, ServiceDelegate {
     func didFinish(error: Error?) {
         self.projectView.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        modalPresentationStyle.rawValue
-        present(TasksViewController(), animated: true, completion: nil)
+        let tasksViewController = TasksViewController()
+        let project = viewModel.projects[indexPath.row]
+        tasksViewController.project = project
+        
+        
+        present(tasksViewController, animated: true, completion: nil)
     }
 }
